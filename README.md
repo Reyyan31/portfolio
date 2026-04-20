@@ -2,7 +2,7 @@
 
 A high-performance, recruiter-optimized portfolio built for **Reyyan Alam**, specialized in Backend Engineering, Cloud Systems, and Scaling.
 
-![Portfolio Preview](public/icon.png)
+![Portfolio Preview](https://reyyan-portfolio.vercel.app/)
 
 ## 🌟 Key Features
 
@@ -59,7 +59,7 @@ npm run build
 
 ## 📬 Contact & Connect
 
-- **Website**: [reyyanalam.com](https://reyyanalam.com) (Or current deployment link)
+- **Website**: (https://reyyan-portfolio.vercel.app/)
 - **LinkedIn**: [linkedin.com/in/reyyan-alam-a23679363](https://www.linkedin.com/in/reyyan-alam-a23679363/)
 - **Email**: [reyyanalam6@gmail.com](mailto:reyyanalam6@gmail.com)
 - **Calendly**: [Book a 15-min call](https://calendly.com/reyyanalam6/15-minute-meeting)

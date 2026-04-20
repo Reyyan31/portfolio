@@ -30,17 +30,21 @@ export function CVModal({ isOpen, onClose }: CVModalProps) {
             className="relative w-full max-w-5xl max-h-[90vh] bg-white text-black rounded-lg shadow-2xl flex flex-col overflow-hidden"
           >
             {/* Header / Action Bar */}
-            <div className="flex items-center justify-between p-4 sm:p-6 border-b border-neutral-200 bg-neutral-50 shrink-0">
-              <h2 className="text-xl sm:text-2xl font-black tracking-tight text-neutral-900">Reyyan_Alam_CV_v4.docx <span className="text-sm font-medium text-neutral-500 ml-2 hidden sm:inline">(Live Web Version)</span></h2>
+            <div className="flex items-center justify-between p-4 sm:p-6 border-b border-neutral-200 bg-neutral-50 shrink-0 gap-2">
+              <h2 className="text-lg sm:text-2xl font-black tracking-tight text-neutral-900 truncate pr-2">
+                Reyyan_Alam_CV<span className="hidden xs:inline">_v4.docx</span>
+                <span className="text-sm font-medium text-neutral-500 ml-2 hidden lg:inline">(Live Web Version)</span>
+              </h2>
               
-              <div className="flex gap-2 sm:gap-4">
+              <div className="flex gap-1.5 sm:gap-4 shrink-0">
                 <a 
                   href="/Reyyan_Alam_CV_v4.docx" 
                   download
-                  className="flex items-center gap-2 bg-[#2563eb] text-white px-4 py-2 sm:px-5 sm:py-2.5 rounded-md font-bold hover:bg-blue-700 transition-colors shadow-sm text-sm sm:text-base"
+                  className="flex items-center gap-2 bg-[#2563eb] text-white px-3 py-2 sm:px-5 sm:py-2.5 rounded-md font-bold hover:bg-blue-700 transition-colors shadow-sm text-sm sm:text-base whitespace-nowrap"
                 >
                   <Download className="w-4 h-4" />
-                  Download <span className="hidden sm:inline">.docx</span>
+                  <span className="hidden sm:inline">Download</span>
+                  <span className="hidden md:inline">.docx</span>
                 </a>
                 <button
                   onClick={onClose}

@@ -5,13 +5,14 @@ import { useInView, useMotionValue, useSpring } from "framer-motion";
 
 export function AnimatedCounter({ value, suffix, duration = 2 }: { value: number; suffix: string; duration?: number }) {
   const ref = useRef<HTMLSpanElement>(null);
-  const inView = useInView(ref, { once: true, margin: "-100px" });
+  const inView = useInView(ref, { once: true, margin: "0px" });
   const [displayValue, setDisplayValue] = useState(0);
 
   const motionValue = useMotionValue(0);
   const springValue = useSpring(motionValue, {
-    duration: duration * 1000,
-    bounce: 0,
+    stiffness: 100,
+    damping: 30,
+    restDelta: 0.001
   });
 
   useEffect(() => {

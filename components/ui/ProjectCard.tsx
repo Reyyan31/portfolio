@@ -1,14 +1,18 @@
 "use client";
 
 import { useRef, useState } from "react";
+import Link from "next/link";
 import { ExternalLink } from "lucide-react";
 import { GithubIcon } from "@/components/icons/GithubIcon";
+
+import { ProjectImageSlider } from "./ProjectImageSlider";
 
 type ProjectProps = {
   title: string;
   description: string;
   tech: string[];
   metrics: string;
+  images: string[];
   live: string | null;
   github: string | null;
   caseStudyHref?: string;
@@ -69,6 +73,9 @@ export function ProjectCard({ project }: { project: ProjectProps }) {
       
       {/* Content wrapper to float above glow */}
       <div className="relative z-10 flex flex-col h-full">
+        {/* Interactive Image Slider */}
+        <ProjectImageSlider images={project.images} />
+
         <div className="flex justify-between items-start mb-4">
           <div className="flex items-center gap-3">
             {project.live && (
@@ -116,14 +123,14 @@ export function ProjectCard({ project }: { project: ProjectProps }) {
         {(project.caseStudyHref || project.blogHref) && (
           <div className="flex gap-3 mt-2">
             {project.caseStudyHref && (
-              <a href={project.caseStudyHref} className="w-full text-center py-2.5 rounded-lg bg-white text-black font-bold text-sm hover:bg-neutral-200 transition-colors">
+              <Link href={project.caseStudyHref} className="w-full text-center py-2.5 rounded-lg bg-white text-black font-bold text-sm hover:bg-neutral-200 transition-colors">
                 Read Case Study
-              </a>
+              </Link>
             )}
             {project.blogHref && (
-              <a href={project.blogHref} className="w-full text-center py-2.5 rounded-lg border border-white/20 text-white font-bold text-sm hover:bg-white/10 transition-colors">
+              <Link href={project.blogHref} className="w-full text-center py-2.5 rounded-lg border border-white/20 text-white font-bold text-sm hover:bg-white/10 transition-colors">
                 Read Dev Blog
-              </a>
+              </Link>
             )}
           </div>
         )}

@@ -7,12 +7,18 @@
   --font-mono: var(--font-geist-mono);
   
   --color-brand: #3b82f6; /* blue-500 equivalent */
+  --color-recruiter: #ffaa00; /* gold-500 */
   --color-border: #262626; /* neutral-800 equivalent */
   --color-muted: #a3a3a3; /* neutral-400 */
 }
 
 :root {
   color-scheme: dark;
+}
+
+.recruiter-theme {
+  --color-brand: #ffaa00;
+  --color-selection: #ffaa00;
 }
 
 body {
@@ -23,6 +29,33 @@ body {
 }
 
 ::selection {
-  background: #3b82f6;
-  color: #fff;
+  background: var(--color-brand);
+  color: #000;
+}
+
+/* Digital Scan Effect */
+.recruiter-theme::after {
+  content: "";
+  position: fixed;
+  top: -100px;
+  left: 0;
+  width: 100vw;
+  height: 50px;
+  background: linear-gradient(to bottom, transparent, rgba(255, 170, 0, 0.15), transparent);
+  animation: scanline 4s linear infinite;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+@keyframes scanline {
+  0% { top: -100px; }
+  100% { top: 100vh; }
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }

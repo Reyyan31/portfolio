@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { ArrowLeft, Server, Database, Shield, Zap, Network, TrendingUp } from "lucide-react";
 import { AnimatedElement } from "@/components/ui/AnimatedElement";
+import { InteractiveGallery } from "@/components/ui/InteractiveGallery";
 
 export default function BuzzMapCaseStudy() {
   return (
@@ -90,6 +91,16 @@ export default function BuzzMapCaseStudy() {
               <ArrowLeft className="w-6 h-6 text-white/20 rotate-180" />
             </div>
           </div>
+
+          <InteractiveGallery 
+            title="BuzzMap Real-time Interface" 
+            images={[
+              "/project-imgs/buzzmap-1.jpeg",
+              "/project-imgs/buzzmap-2.jpeg",
+              "/project-imgs/buzzmap-3.jpeg",
+              "/project-imgs/buzzmap-4.jpeg",
+            ]} 
+          />
 
           <p className="text-muted leading-relaxed mb-6">
             To solve the scaling bottlenecks, I implemented a robust real-time pipeline:

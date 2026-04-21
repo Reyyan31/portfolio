@@ -17,8 +17,10 @@ export const metadata: Metadata = {
   description: "Backend Engineer with experience in Node.js, APIs, cloud systems, and ERP platforms. Serving 1M+ users.",
 };
 
+import { Suspense } from "react";
 import { RecruiterModeProvider } from "@/components/providers/RecruiterModeProvider";
 import { AvailabilityBanner } from "@/components/ui/AvailabilityBanner";
+import { RecruiterActionBar } from "@/components/ui/RecruiterActionBar";
 
 export default function RootLayout({
   children,
@@ -30,10 +32,26 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased dark`}
     >
+      <head>
+        {/* Simple legacy browser check */}
+        <script dangerouslySetInnerHTML={{ __html: `
+          try {
+            eval("() => {}");
+          } catch (e) {
+            document.documentElement.className += " legacy-browser";
+            alert("This modern portfolio works best in Chrome, Edge, or Safari. Some features may not load in Internet Explorer.");
+          }
+        `}} />
+      </head>
       <body className="min-h-full flex flex-col bg-background text-foreground bg-[#000] selection:bg-brand selection:text-white">
         <RecruiterModeProvider>
           <AvailabilityBanner />
-          {children}
+          <Suspense fallback={<div className="flex-1 flex items-center justify-center min-h-[50vh]">
+            <div className="w-8 h-8 border-4 border-brand border-t-transparent rounded-full animate-spin" />
+          </div>}>
+            {children}
+          </Suspense>
+          <RecruiterActionBar />
         </RecruiterModeProvider>
       </body>
     </html>

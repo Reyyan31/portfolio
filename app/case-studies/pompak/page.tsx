@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { ArrowLeft, Server, Database, Shield, Users, Network, TrendingUp } from "lucide-react";
 import { AnimatedElement } from "@/components/ui/AnimatedElement";
+import { InteractiveGallery } from "@/components/ui/InteractiveGallery";
 
 export default function PomPakCaseStudy() {
   return (
@@ -90,6 +91,16 @@ export default function PomPakCaseStudy() {
               <ArrowLeft className="w-6 h-6 text-white/20 rotate-180" />
             </div>
           </div>
+
+          <InteractiveGallery 
+            title="PomPak Learning Platform" 
+            images={[
+              "/project-imgs/pompak-1.jpg",
+              "/project-imgs/pompak-2.jpg",
+              "/project-imgs/pompak-3.jpg",
+              "/project-imgs/pompak-4.jpg",
+            ]} 
+          />
 
           <p className="text-muted leading-relaxed mb-6">
             To solve the concurrency bottlenecks, I engineered a massive overhaul:

@@ -1,6 +1,6 @@
 "use client";
 
-import { createContext, useContext, useState, ReactNode } from "react";
+import { createContext, useContext, useState, ReactNode, useEffect } from "react";
 
 type RecruiterModeContextType = {
   isRecruiterMode: boolean;
@@ -15,14 +15,25 @@ const RecruiterModeContext = createContext<RecruiterModeContextType>({
 export function RecruiterModeProvider({ children }: { children: ReactNode }) {
   const [isRecruiterMode, setIsRecruiterMode] = useState(false);
 
+  useEffect(() => {
+    const stored = localStorage.getItem("recruiterMode");
+    if (stored === "true") setIsRecruiterMode(true);
+  }, []);
+
   const toggleRecruiterMode = () => {
-    setIsRecruiterMode(prev => !prev);
+    setIsRecruiterMode(prev => {
+      const newVal = !prev;
+      localStorage.setItem("recruiterMode", String(newVal));
+      return newVal;
+    });
   };
 
   return (
-    <RecruiterModeContext.Provider value={{ isRecruiterMode, toggleRecruiterMode }}>
-      {children}
-    </RecruiterModeContext.Provider>
+    <div className={isRecruiterMode ? "recruiter-theme" : ""}>
+      <RecruiterModeContext.Provider value={{ isRecruiterMode, toggleRecruiterMode }}>
+        {children}
+      </RecruiterModeContext.Provider>
+    </div>
   );
 }
 

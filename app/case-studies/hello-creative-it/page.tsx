@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { ArrowLeft, Server, Database, Shield, Zap, TrendingUp, LayoutDashboard, FileText } from "lucide-react";
 import { AnimatedElement } from "@/components/ui/AnimatedElement";
+import { InteractiveGallery } from "@/components/ui/InteractiveGallery";
 
 export default function HelloITCaseStudy() {
   return (
@@ -90,6 +91,16 @@ export default function HelloITCaseStudy() {
               <ArrowLeft className="w-6 h-6 text-white/20 rotate-180" />
             </div>
           </div>
+
+          <InteractiveGallery 
+            title="Hello Enterprise Portal" 
+            images={[
+              "/project-imgs/hello-1.jpg",
+              "/project-imgs/hello-2.jpg",
+              "/project-imgs/hello-3.jpg",
+              "/project-imgs/hello-4.jpg",
+            ]} 
+          />
 
           <p className="text-muted leading-relaxed mb-6">
             Core features built from the ground up:

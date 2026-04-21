@@ -127,17 +127,56 @@ export default function Hero() {
                   transition={{ duration: 0.4 }}
                   className="w-full relative z-20 flex flex-col gap-6"
                 >
-                  <div className="p-8 rounded-3xl border border-[#ffaa00]/20 bg-[#ffaa00]/10 backdrop-blur-md shadow-2xl shadow-[#ffaa00]/5 flex flex-col justify-center items-center text-center">
-                    <div className="text-6xl font-black text-[#ffaa00] tracking-tighter mb-2">100%</div>
-                    <div className="text-white/80 font-bold uppercase tracking-widest text-sm">Delivery Rate</div>
-                    <p className="text-[#ffaa00]/60 mt-4 text-sm font-medium">Tested environments, clean PRs, zero delays.</p>
-                  </div>
-                  
-                  <div className="p-8 rounded-3xl border border-white/5 bg-white/5 backdrop-blur-md shadow-2xl flex flex-col justify-center items-center text-center relative overflow-hidden">
-                    <div className="absolute top-0 right-0 w-32 h-32 bg-blue-500/10 blur-[50px] -z-10" />
-                    <div className="text-6xl font-black text-white tracking-tighter mb-2">≤ 2h</div>
-                    <div className="text-brand font-bold uppercase tracking-widest text-sm">Response Time</div>
-                    <p className="text-white/40 mt-4 text-sm font-medium">Highly communicative across global timezones.</p>
+                  <div className="flex flex-col gap-6">
+                    {/* Expertise Matrix */}
+                    <div className="p-8 rounded-3xl border border-[#ffaa00]/30 bg-[#ffaa00]/5 backdrop-blur-xl shadow-2xl relative overflow-hidden group">
+                      <div className="absolute top-0 right-0 w-32 h-32 bg-[#ffaa00]/10 blur-[60px] -z-10 group-hover:scale-150 transition-transform duration-700" />
+                      
+                      <div className="flex items-center gap-4 mb-8">
+                        <div className="p-3 rounded-2xl bg-[#ffaa00]/20 border border-[#ffaa00]/30">
+                          <Briefcase className="w-6 h-6 text-[#ffaa00]" />
+                        </div>
+                        <div>
+                          <h4 className="text-xl font-bold text-white tracking-tight">Expertise Matrix</h4>
+                          <p className="text-[#ffaa00]/60 text-xs font-bold uppercase tracking-[0.2em]">Hiring Readiness</p>
+                        </div>
+                      </div>
+
+                      <div className="space-y-6">
+                        {[
+                          { label: "Backend Architecture", value: "98%", desc: "Distributed Systems, Redis, RabbitMQ" },
+                          { label: "Database Optimization", value: "95%", desc: "SQL Server Stored Procs, GeoJSON" },
+                          { label: "Infrastructure / DevOps", value: "90%", desc: "AWS, Docker, Stateless Scaling" }
+                        ].map((stat, i) => (
+                          <div key={stat.label} className="relative">
+                            <div className="flex justify-between items-end mb-2">
+                              <span className="text-white/90 font-bold text-sm tracking-tight">{stat.label}</span>
+                              <span className="text-[#ffaa00] font-black text-xs font-mono">{stat.value}</span>
+                            </div>
+                            <div className="h-1 w-full bg-white/5 rounded-full overflow-hidden">
+                              <motion.div 
+                                initial={{ width: 0 }}
+                                animate={{ width: stat.value }}
+                                transition={{ duration: 1, delay: 0.5 + (i * 0.1) }}
+                                className="h-full bg-gradient-to-r from-[#ffaa00] to-[#ffaa00]/40" 
+                              />
+                            </div>
+                            <p className="text-[10px] text-white/30 mt-1.5 font-medium">{stat.desc}</p>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+
+                    <div className="grid grid-cols-2 gap-4">
+                      <div className="p-6 rounded-2xl border border-white/5 bg-white/5 backdrop-blur-md">
+                        <div className="text-2xl font-black text-white tracking-tighter mb-1">≤ 2h</div>
+                        <div className="text-[#ffaa00]/80 font-bold uppercase tracking-widest text-[10px]">Response Time</div>
+                      </div>
+                      <div className="p-6 rounded-2xl border border-white/5 bg-white/5 backdrop-blur-md">
+                        <div className="text-2xl font-black text-white tracking-tighter mb-1">100%</div>
+                        <div className="text-[#ffaa00]/80 font-bold uppercase tracking-widest text-[10px]">Delivery Rate</div>
+                      </div>
+                    </div>
                   </div>
                 </motion.div>
               )}

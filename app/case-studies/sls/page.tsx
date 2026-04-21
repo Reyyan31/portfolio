@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { ArrowLeft, Server, Database, Shield, Users, LayoutDashboard, FileText } from "lucide-react";
 import { AnimatedElement } from "@/components/ui/AnimatedElement";
+import { InteractiveGallery } from "@/components/ui/InteractiveGallery";
 
 export default function SLSCaseStudy() {
   return (
@@ -90,6 +91,16 @@ export default function SLSCaseStudy() {
               <ArrowLeft className="w-6 h-6 text-white/20 rotate-180" />
             </div>
           </div>
+
+          <InteractiveGallery 
+            title="SLS Management Interface" 
+            images={[
+              "/project-imgs/sls-1.jpg",
+              "/project-imgs/sls-2.jpg",
+              "/project-imgs/sls-3.jpg",
+              "/project-imgs/sls-4.jpg",
+            ]} 
+          />
 
           <p className="text-muted leading-relaxed mb-6">
             Key engineering implementations included:

@@ -38,7 +38,7 @@ export default function Blog1MUsers() {
           </p>
 
           <p>
-            During my time as a Full Stack Engineer at Seven Koncepts, we hit exactly this scaling challenge with <strong>PomPak</strong>, a financial literacy application that quickly accrued over 1 million users and 750,000 active students. The stack? <strong>Laravel/PHP running against SQL Server</strong>.
+            The scaling challenge for <strong>PomPak</strong>—a financial literacy application that quickly accrued over 1 million users and 750,000 active students—required a specialized architectural approach. The stack? <strong>Laravel/PHP running against SQL Server</strong>.
           </p>
 
           <h3>The ORM Bottleneck</h3>

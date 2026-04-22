@@ -32,13 +32,13 @@ export function CVModal({ isOpen, onClose }: CVModalProps) {
             {/* Header / Action Bar */}
             <div className="flex items-center justify-between p-4 sm:p-6 border-b border-neutral-200 bg-neutral-50 shrink-0 gap-2">
               <h2 className="text-lg sm:text-2xl font-black tracking-tight text-neutral-900 truncate pr-2">
-                Reyyan_Alam_CV<span className="hidden xs:inline">_v4.docx</span>
+                Reyyan_Alam_CV<span className="hidden xs:inline">.docx</span>
                 <span className="text-sm font-medium text-neutral-500 ml-2 hidden lg:inline">(Live Web Version)</span>
               </h2>
               
               <div className="flex gap-1.5 sm:gap-4 shrink-0">
                 <a 
-                  href="/Reyyan_Alam_CV_v4.docx" 
+                  href="/Reyyan_Alam_CV.docx" 
                   download
                   className="flex items-center gap-2 bg-[#2563eb] text-white px-3 py-2 sm:px-5 sm:py-2.5 rounded-md font-bold hover:bg-blue-700 transition-colors shadow-sm text-sm sm:text-base whitespace-nowrap"
                 >
@@ -119,7 +119,7 @@ export function CVModal({ isOpen, onClose }: CVModalProps) {
                         <span className="font-normal italic">Aug 2025 – Dec 2025</span>
                       </div>
                       <ul className="list-disc pl-[20px] mt-[6px] space-y-[4px] text-neutral-900 text-[14px] leading-snug marker:text-black">
-                        <li>Led backend of PomPak (nflpy.knowledgeplatform.com) — national financial literacy platform backed by State Bank of Pakistan & JazzCash — 1M+ users, 750,000+ students, 45+ districts. Built on Laravel/PHP with SQL Server stored procedures.</li>
+                        <li>Built and shipped content platforms (content upload, feed/scroll experiences) and e-commerce projects across multiple client engagements.</li>
                         <li>Delivered across Node.js, Django, Flask, and PHP within the same company — framework-agnostic backend delivery under Agile/Scrum.</li>
                         <li>Containerised services with Docker, deployed to AWS EC2/S3, maintained CI/CD pipelines and automated DB migrations.</li>
                       </ul>

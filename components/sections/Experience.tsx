@@ -27,8 +27,8 @@ const experiences = [
     company: "Seven Koncepts",
     role: "Full Stack Software Engineer",
     date: "Aug 2025 – Dec 2025",
-    impact: "Led backend on a national platform for 1M+ users (PomPak). Containerized services with Docker to AWS EC2/S3.",
-    roi: "1M+ Scaled Users"
+    impact: "Built and shipped content platforms and e-commerce projects across Node.js, Django, Flask, and PHP. Containerised services with Docker, deployed to AWS EC2/S3, and maintained CI/CD pipelines.",
+    roi: "Framework-Agnostic Delivery"
   },
   {
     company: "National Testing Service (NTS)",

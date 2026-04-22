@@ -43,7 +43,7 @@ export function RecruiterActionBar() {
               {/* Actions */}
               <div className="flex items-center gap-0.5 md:gap-1">
                 <a
-                  href="/Reyyan_Alam_Resume.pdf"
+                  href="/Reyyan_Alam_CV.docx"
                   download
                   className="p-2 md:p-3 rounded-xl hover:bg-[#ffaa00] hover:text-black text-white transition-all group relative"
                   title="Download Resume"

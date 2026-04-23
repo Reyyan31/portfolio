@@ -55,7 +55,9 @@ export function RecruiterActionBar() {
                 </a>
 
                 <a
-                  href="mailto:reyyan.alam.dev@gmail.com"
+                  href="https://mail.google.com/mail/?view=cm&fs=1&to=reyyanalam6@gmail.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="p-2 md:p-3 rounded-xl hover:bg-[#ffaa00] hover:text-black text-white transition-all group relative"
                   title="Send Email"
                 >

@@ -42,7 +42,9 @@ export default function AboutContact() {
 
           <div className="space-y-4">
             <a 
-              href="mailto:reyyanalam6@gmail.com" 
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=reyyanalam6@gmail.com" 
+              target="_blank"
+              rel="noopener noreferrer"
               className="flex items-center gap-4 text-muted hover:text-white transition-colors group p-4 rounded-xl border border-white/5 bg-white/5 hover:bg-white/10 w-fit md:w-full max-w-sm"
             >
               <Mail className="w-5 h-5 text-brand" />

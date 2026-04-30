@@ -96,9 +96,7 @@ export default function HelloITCaseStudy() {
             title="Hello Enterprise Portal" 
             images={[
               "/project-imgs/hello-1.jpg",
-              "/project-imgs/hello-2.jpg",
-              "/project-imgs/hello-3.jpg",
-              "/project-imgs/hello-4.jpg",
+              "/project-imgs/hello-2.webp",
             ]} 
           />
 

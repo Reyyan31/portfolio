@@ -96,9 +96,7 @@ export default function SLSCaseStudy() {
             title="SLS Management Interface" 
             images={[
               "/project-imgs/sls-1.jpg",
-              "/project-imgs/sls-2.jpg",
-              "/project-imgs/sls-3.jpg",
-              "/project-imgs/sls-4.jpg",
+              "/project-imgs/sls-2.webp",
             ]} 
           />
 

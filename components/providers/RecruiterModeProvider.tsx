@@ -14,8 +14,10 @@ const RecruiterModeContext = createContext<RecruiterModeContextType>({
 
 export function RecruiterModeProvider({ children }: { children: ReactNode }) {
   const [isRecruiterMode, setIsRecruiterMode] = useState(false);
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
+    setMounted(true);
     const stored = localStorage.getItem("recruiterMode");
     if (stored === "true") setIsRecruiterMode(true);
   }, []);
@@ -29,8 +31,8 @@ export function RecruiterModeProvider({ children }: { children: ReactNode }) {
   };
 
   return (
-    <div className={isRecruiterMode ? "recruiter-theme" : ""}>
-      <RecruiterModeContext.Provider value={{ isRecruiterMode, toggleRecruiterMode }}>
+    <div className={mounted && isRecruiterMode ? "recruiter-theme" : ""}>
+      <RecruiterModeContext.Provider value={{ isRecruiterMode: mounted ? isRecruiterMode : false, toggleRecruiterMode }}>
         {children}
       </RecruiterModeContext.Provider>
     </div>

@@ -45,9 +45,7 @@ const projects = [
     metrics: "12,000+ Students",
     images: [
       "/project-imgs/sls-1.jpg",
-      "/project-imgs/sls-2.jpg",
-      "/project-imgs/sls-3.jpg",
-      "/project-imgs/sls-4.jpg"
+      "/project-imgs/sls-2.webp"
     ],
     live: "https://sls.creativeitpark.org",
     github: null,
@@ -61,9 +59,7 @@ const projects = [
     metrics: "Double-Entry Accounting",
     images: [
       "/project-imgs/hello-1.jpg",
-      "/project-imgs/hello-2.jpg",
-      "/project-imgs/hello-3.jpg",
-      "/project-imgs/hello-4.jpg"
+      "/project-imgs/hello-2.webp"
     ],
     live: "https://hello.creativeitpark.org",
     github: null,

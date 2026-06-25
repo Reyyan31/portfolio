@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import { Section } from "@/components/ui/Section";
 import { AnimatedElement } from "@/components/ui/AnimatedElement";
 import { ProjectCard } from "@/components/ui/ProjectCard";
@@ -8,6 +9,7 @@ import { useRecruiterMode } from "@/components/providers/RecruiterModeProvider";
 const projects = [
   {
     title: "PomPak – National Platform",
+    category: "Scale",
     description: "National financial literacy platform backed by State Bank of Pakistan & JazzCash. Handled scale for 1M+ users, 750k+ students across 45+ districts.",
     tech: ["PHP/Laravel", "SQL Server", "JavaScript", "Docker", "AWS"],
     metrics: "1M+ Users • 750k+ Students",
@@ -24,6 +26,7 @@ const projects = [
   },
   {
     title: "BuzzMap",
+    category: "Real-Time",
     description: "Engineered real-time event discovery backend delivering geolocation APIs. Achieved <50ms WebSocket latency, 99.99% uptime, and scaled Redis caching for 10k+ req/sec to meet strict US production requirements.",
     tech: ["Node.js", "Express", "MongoDB", "Redis", "WebSockets"],
     metrics: "<50ms Latency • 99.99% Uptime",
@@ -40,6 +43,7 @@ const projects = [
   },
   {
     title: "SLS – School Management",
+    category: "ERP",
     description: "Comprehensive school ERP managing 12,000+ students across 8 portals. Includes full financial audit suite and bulk challenge printing.",
     tech: ["PHP/Laravel", "MySQL", "Bootstrap"],
     metrics: "12,000+ Students",
@@ -54,6 +58,7 @@ const projects = [
   },
   {
     title: "Hello Creative IT Portal",
+    category: "ERP",
     description: "Company-wide CRM/ERP managing HR, payroll, deal pipelines, and a full double-entry accounting module (ledger, P&L, balance sheet).",
     tech: ["PHP/Laravel", "MySQL", "Vue.js", "Redis"],
     metrics: "Double-Entry Accounting",
@@ -70,6 +75,12 @@ const projects = [
 
 export default function Projects() {
   const { isRecruiterMode } = useRecruiterMode();
+  const [activeFilter, setActiveFilter] = useState<"All" | "Scale" | "Real-Time" | "ERP">("All");
+
+  const visibleProjects = projects.filter((project) => {
+    if (activeFilter === "All") return true;
+    return project.category === activeFilter;
+  });
   
   return (
     <Section id="projects">
@@ -84,8 +95,24 @@ export default function Projects() {
         </p>
       </AnimatedElement>
 
+      <div className="flex flex-wrap gap-3 mb-8">
+        {(["All", "Scale", "Real-Time", "ERP"] as const).map((filter) => (
+          <button
+            key={filter}
+            onClick={() => setActiveFilter(filter)}
+            className={`px-4 py-2 rounded-full border text-sm font-semibold transition-all ${
+              activeFilter === filter
+                ? "border-brand bg-brand/15 text-brand"
+                : "border-white/10 bg-white/[0.03] text-white/70 hover:border-white/20 hover:text-white"
+            }`}
+          >
+            {filter}
+          </button>
+        ))}
+      </div>
+
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full">
-        {projects.map((project, index) => (
+        {visibleProjects.map((project, index) => (
           <AnimatedElement
             key={index}
             delay={index * 0.1}

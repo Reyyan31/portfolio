@@ -15,25 +15,38 @@ export function ProjectImageSlider({ images }: ProjectImageSliderProps) {
   const [direction, setDirection] = useState(0); // 1 for right, -1 for left
   const [isHovered, setIsHovered] = useState(false);
 
+  const safeImages = images.filter((image): image is string => typeof image === "string" && image.trim().length > 0);
+
   const nextSlide = () => {
+    if (safeImages.length === 0) return;
     setDirection(1);
-    setCurrentIndex((prev) => (prev + 1) % images.length);
+    setCurrentIndex((prev) => (prev + 1) % safeImages.length);
   };
 
   const prevSlide = () => {
+    if (safeImages.length === 0) return;
     setDirection(-1);
-    setCurrentIndex((prev) => (prev - 1 + images.length) % images.length);
+    setCurrentIndex((prev) => (prev - 1 + safeImages.length) % safeImages.length);
   };
 
   useEffect(() => {
-    if (isHovered) return;
+    if (safeImages.length === 0) {
+      setCurrentIndex(0);
+      return;
+    }
+
+    setCurrentIndex((prev) => (prev >= safeImages.length ? 0 : prev));
+  }, [safeImages.length]);
+
+  useEffect(() => {
+    if (isHovered || safeImages.length <= 1) return;
 
     const interval = setInterval(() => {
       nextSlide();
     }, 5000);
 
     return () => clearInterval(interval);
-  }, [isHovered, images.length]);
+  }, [isHovered, safeImages.length]);
 
   const variants = {
     enter: (direction: number) => ({
@@ -54,6 +67,14 @@ export function ProjectImageSlider({ images }: ProjectImageSliderProps) {
       scale: 0.9,
     }),
   };
+
+  if (safeImages.length === 0) {
+    return (
+      <div className="relative w-full aspect-video rounded-xl overflow-hidden mb-6 border border-white/10 bg-white/[0.03] flex items-center justify-center text-sm text-white/50">
+        No project imagery available
+      </div>
+    );
+  }
 
   return (
     <div
@@ -77,7 +98,7 @@ export function ProjectImageSlider({ images }: ProjectImageSliderProps) {
           className="absolute inset-0"
         >
           <Image
-            src={images[currentIndex]}
+            src={safeImages[currentIndex]}
             alt={`Project screenshot ${currentIndex + 1}`}
             fill
             className="object-cover object-top transition-transform duration-700 group-hover:scale-105"
@@ -116,7 +137,7 @@ export function ProjectImageSlider({ images }: ProjectImageSliderProps) {
 
       {/* Indicator Dots */}
       <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5 z-20">
-        {images.map((_, index) => (
+        {safeImages.map((_, index) => (
           <button
             key={index}
             onClick={(e) => {

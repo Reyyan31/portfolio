@@ -56,6 +56,19 @@ export default function Hero() {
               </p>
             </AnimatedElement>
 
+            <AnimatedElement delay={0.35} direction="up" className="flex flex-wrap gap-3 mb-10">
+              {[
+                { label: "1M+ users" },
+                { label: "99.99% uptime" },
+                { label: "EU relocation ready" },
+                { label: "Open to remote" },
+              ].map((item) => (
+                <div key={item.label} className="rounded-full border border-white/10 bg-white/[0.04] px-3 py-2 text-sm font-medium text-white/80 backdrop-blur-sm">
+                  {item.label}
+                </div>
+              ))}
+            </AnimatedElement>
+
             <AnimatedElement delay={0.4} direction="up" className="flex flex-col sm:flex-row gap-4 w-full flex-wrap sm:w-auto">
               <Link
                 href="#projects"

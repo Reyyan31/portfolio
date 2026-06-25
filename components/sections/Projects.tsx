@@ -19,7 +19,7 @@ const projects = [
       "/project-imgs/pompak-3.jpg",
       "/project-imgs/pompak-4.jpg"
     ],
-    live: "https://nflpy.knowledgeplatform.com",
+    live: "https://nflpy.pk/elearning",
     github: null,
     caseStudyHref: "/case-studies/pompak",
     blogHref: "/blog/1m-users-laravel",

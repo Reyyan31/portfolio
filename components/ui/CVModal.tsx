@@ -80,7 +80,7 @@ export function CVModal({ isOpen, onClose }: CVModalProps) {
                 <section className="mb-6">
                   <h3 className="text-[16px] font-bold text-black uppercase border-b border-black mb-2 pb-1">PROFESSIONAL SUMMARY</h3>
                   <p className="text-neutral-900 text-[14px] leading-snug">
-                    Backend Engineer with 1+ year of production experience building systems that handle real users at real scale — from a national government platform with 1M+ users to an ERP managing 12,000+ students. Comfortable in Node.js, PHP/Laravel, and Django, choosing the right tool for the job. Solid DevOps fundamentals: Linux administration, Docker, CI/CD, and cloud deployments. Experienced in remote async collaboration with a US-based engineering team. Open to relocation to EU/UK/US with visa sponsorship, or fully remote.
+                    Backend Engineer with 2+ year of production experience building systems that handle real users at real scale — from a national government platform with 1M+ users to an ERP managing 12,000+ students. Comfortable in Node.js, PHP/Laravel, and Django, choosing the right tool for the job. Solid DevOps fundamentals: Linux administration, Docker, CI/CD, and cloud deployments. Experienced in remote async collaboration with a US-based engineering team. Open to relocation to EU/UK/US with visa sponsorship, or fully remote.
                   </p>
                 </section>
 

@@ -1,0 +1,116 @@
+{
+  "version": 4,
+  "terraform_version": "1.15.7",
+  "serial": 42,
+  "lineage": "281eddad-11a6-2e2c-d064-f63e1f04d459",
+  "outputs": {
+    "instance_id": {
+      "value": "ocid1.instance.oc1.ap-mumbai-1.anrg6ljrfuk6alaca4y262pwbkae5s2wqtvkyifftm2zza47taab2okgtm5a",
+      "type": "string"
+    },
+    "instance_public_ip": {
+      "value": "161.118.178.72",
+      "type": "string"
+    },
+    "vcn_id": {
+      "value": "ocid1.vcn.oc1.ap-mumbai-1.amaaaaaafuk6alaars3wmsvhojmrgvp4gl5eowzgewa2ketwlbdhbrps3vsq",
+      "type": "string"
+    }
+  },
+  "resources": [
+    {
+      "mode": "managed",
+      "type": "oci_core_subnet",
+      "name": "autocloud_subnet",
+      "provider": "provider[\"registry.terraform.io/oracle/oci\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "availability_domain": null,
+            "cidr_block": "10.0.1.0/24",
+            "compartment_id": "ocid1.tenancy.oc1..aaaaaaaafm5hq73i5zeny3fsbftwyzgldzkhlvgeyrnv4bhyui6phlbnghoa",
+            "defined_tags": {
+              "Oracle-Tags.CreatedBy": "default/reyyanalam6@gmail.com",
+              "Oracle-Tags.CreatedOn": "2026-06-26T18:16:11.698Z"
+            },
+            "dhcp_options_id": "ocid1.dhcpoptions.oc1.ap-mumbai-1.aaaaaaaajrsllve264wunnyyjgcxhgek6yzafhlqawoodqjtpmxrobuamfwa",
+            "display_name": "autocloud-subnet",
+            "dns_label": "autocloudnet",
+            "freeform_tags": {},
+            "id": "ocid1.subnet.oc1.ap-mumbai-1.aaaaaaaaenje2xyif5fd2de3a76nfuk5uednqq42u3ahibh2fodopaxkwiwq",
+            "ipv6cidr_block": null,
+            "ipv6cidr_blocks": [],
+            "ipv6virtual_router_ip": null,
+            "prohibit_internet_ingress": false,
+            "prohibit_public_ip_on_vnic": false,
+            "route_table_id": "ocid1.routetable.oc1.ap-mumbai-1.aaaaaaaahgmnfwmqg4uqpltqtn4htq7kiug7hxqaa734ggnmwb2tvs7sd5va",
+            "security_list_ids": [
+              "ocid1.securitylist.oc1.ap-mumbai-1.aaaaaaaasxyf32q64bvsjbbc3bm7by3qcolafbf5mg6q6sjtzmmrqbhpnsja"
+            ],
+            "state": "AVAILABLE",
+            "subnet_domain_name": "autocloudnet.autocloudvcn.oraclevcn.com",
+            "time_created": "2026-06-26 18:16:11.738 +0000 UTC",
+            "timeouts": null,
+            "vcn_id": "ocid1.vcn.oc1.ap-mumbai-1.amaaaaaafuk6alaars3wmsvhojmrgvp4gl5eowzgewa2ketwlbdhbrps3vsq",
+            "virtual_router_ip": "10.0.1.1",
+            "virtual_router_mac": "00:00:17:7C:3B:C1"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0,
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjoxMjAwMDAwMDAwMDAwLCJkZWxldGUiOjEyMDAwMDAwMDAwMDAsInVwZGF0ZSI6MTIwMDAwMDAwMDAwMH19",
+          "dependencies": [
+            "oci_core_internet_gateway.autocloud_igw",
+            "oci_core_route_table.autocloud_rt",
+            "oci_core_security_list.autocloud_sl",
+            "oci_core_vcn.autocloud_vcn"
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "oci_core_vcn",
+      "name": "autocloud_vcn",
+      "provider": "provider[\"registry.terraform.io/oracle/oci\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "byoipv6cidr_blocks": [],
+            "byoipv6cidr_details": [],
+            "cidr_block": "10.0.0.0/16",
+            "cidr_blocks": [
+              "10.0.0.0/16"
+            ],
+            "compartment_id": "ocid1.tenancy.oc1..aaaaaaaafm5hq73i5zeny3fsbftwyzgldzkhlvgeyrnv4bhyui6phlbnghoa",
+            "default_dhcp_options_id": "ocid1.dhcpoptions.oc1.ap-mumbai-1.aaaaaaaajrsllve264wunnyyjgcxhgek6yzafhlqawoodqjtpmxrobuamfwa",
+            "default_route_table_id": "ocid1.routetable.oc1.ap-mumbai-1.aaaaaaaachv7jptcwxdzgu5sgiruto56yhaltxwzbogwt2eluxqx5a6te5za",
+            "default_security_list_id": "ocid1.securitylist.oc1.ap-mumbai-1.aaaaaaaageqkhmg47q5edrhvjbyka6jetty5qfimhkx522x6cmfqg7kgvyaq",
+            "defined_tags": {
+              "Oracle-Tags.CreatedBy": "default/reyyanalam6@gmail.com",
+              "Oracle-Tags.CreatedOn": "2026-06-26T18:16:04.338Z"
+            },
+            "display_name": "autocloud-vcn",
+            "dns_label": "autocloudvcn",
+            "freeform_tags": {},
+            "id": "ocid1.vcn.oc1.ap-mumbai-1.amaaaaaafuk6alaars3wmsvhojmrgvp4gl5eowzgewa2ketwlbdhbrps3vsq",
+            "ipv6cidr_blocks": [],
+            "ipv6private_cidr_blocks": [],
+            "is_ipv6enabled": false,
+            "is_oracle_gua_allocation_enabled": null,
+            "security_attributes": {},
+            "state": "AVAILABLE",
+            "time_created": "2026-06-26 18:16:04.4 +0000 UTC",
+            "timeouts": null,
+            "vcn_domain_name": "autocloudvcn.oraclevcn.com"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0,
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjoxMjAwMDAwMDAwMDAwLCJkZWxldGUiOjEyMDAwMDAwMDAwMDAsInVwZGF0ZSI6MTIwMDAwMDAwMDAwMH19"
+        }
+      ]
+    }
+  ],
+  "check_results": null
+}

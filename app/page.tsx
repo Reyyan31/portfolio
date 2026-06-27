@@ -7,6 +7,8 @@ import Experience from "@/components/sections/Experience";
 import AboutContact from "@/components/sections/AboutContact";
 
 export default function Home() {
+  console.log(`[portfolio] homepage rendered at ${new Date().toISOString()}`);
+
   return (
     <main className="flex min-h-screen flex-col items-center">
       <Hero />

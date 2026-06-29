@@ -10,10 +10,11 @@ export const dynamic = "force-dynamic";
 
 export default function Home() {
   console.log(`[portfolio] homepage rendered at ${new Date().toISOString()}`);
-
+  console.log(`[portfolio] serving ${process.env.NODE_ENV} build`);
+  console.log(`[portfolio] node version ${process.version}`);
   return (
     <main className="flex min-h-screen flex-col items-center">
-      {/* <Hero /> */}
+      <Hero />
       <MetricsStrip />
       <Projects />
       <Testimonials />

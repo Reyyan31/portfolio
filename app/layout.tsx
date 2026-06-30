@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Reyyan Alam | Backend Engineer",
-  description: "Backend Engineer with experience in Node.js, APIs, cloud systems, and ERP platforms. Serving 1M+ users.",
+  title: "Reyyan Alam | Backend & DevOps Engineer",
+  description: "Backend & DevOps Engineer with 2+ years of production experience in Node.js, PHP/Laravel, Django, Kubernetes, and cloud infrastructure.",
 };
 
 import { Suspense } from "react";

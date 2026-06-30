@@ -4,16 +4,16 @@ export async function GET() {
     available: true,
     candidate: {
       name: "Reyyan Alam",
-      role: "Backend Engineer",
+      role: "Backend & DevOps Engineer",
       timezone: "PKT (UTC+5)",
-      specialty: "High-Availability Systems & Fast API Development",
+      specialty: "Infrastructure, Kubernetes, CI/CD, observability, and high-scale backends",
     },
     open_to: [
       "Remote (Global)",
-      "EU/US/UK Relocation Ready",
+      "Global Opportunities",
       "On-site (Pakistan Only)"
     ],
-    core_stack: ["Node.js", "PHP/Laravel", "SQL Server", "Redis", "Docker"],
+    
     metrics: {
       max_users_handled: "1M+",
       avg_api_latency: "under 50ms",

@@ -42,16 +42,16 @@ export default function Hero() {
             <AnimatedElement delay={0.2} direction="up" className="max-w-2xl">
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-foreground mb-6 leading-tight flex items-center gap-4">
                 <Terminal className={`w-8 h-8 md:w-10 md:h-10 ${isRecruiterMode ? "text-[#ffaa00]" : "text-brand"}`} />
-                Backend Engineer
+                Backend & DevOps Engineer
               </h2>
             </AnimatedElement>
 
             <AnimatedElement delay={0.3} direction="up" className="max-w-xl mb-10">
               <p className="text-lg md:text-xl text-muted leading-relaxed font-medium">
                 {isRecruiterMode ? (
-                  <>I architect high-performance data systems. From powering national platforms with <strong className="text-white">1M+ users</strong> to scaling distributed enterprise ERPs. Zero downtime, proven ROI, and excellent cross-timezone async communication.</>
+                  <>Backend & DevOps Engineer with 2+ years of production experience building systems at real scale. From national platforms with <strong className="text-white">1M+ users</strong> to enterprise ERPs, I deliver backend architecture, Kubernetes infrastructure, CI/CD, and observability for live production systems.</>
                 ) : (
-                  <>I architect high-performance data systems. From powering national platforms with <strong className="text-white">1M+ users</strong> to scaling distributed enterprise ERPs. Production grade, zero compromise.</>
+                  <>Backend & DevOps Engineer with 2+ years of production experience building systems at real scale. From national platforms with <strong className="text-white">1M+ users</strong> to enterprise ERPs, I deliver production-ready backend architecture, deployments, and observability.</>
                 )}
               </p>
             </AnimatedElement>
@@ -60,7 +60,6 @@ export default function Hero() {
               {[
                 { label: "1M+ users" },
                 { label: "99.99% uptime" },
-                { label: "EU relocation ready" },
                 { label: "Open to remote" },
               ].map((item) => (
                 <div key={item.label} className="rounded-full border border-white/10 bg-white/[0.04] px-3 py-2 text-sm font-medium text-white/80 backdrop-blur-sm">

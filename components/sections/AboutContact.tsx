@@ -12,10 +12,10 @@ export default function AboutContact() {
         <AnimatedElement>
           <h2 className="text-3xl md:text-4xl font-bold mb-6">About Me</h2>
           <p className="text-muted leading-relaxed mb-6">
-            I am a Backend Engineer who chooses the right tool for the job. While I excel in Node.js and TypeScript, I am framework-agnostic, having shipped production platforms in PHP/Laravel and Django. 
+            I am a Backend & DevOps Engineer with 2+ years of production experience building systems at real scale. I own backend architecture, deployment automation, observability, and operations across Node.js, PHP/Laravel, Django, and Kubernetes.
           </p>
           <p className="text-muted leading-relaxed">
-            I don't just write API endpoints; I own the deployment process, set up CI/CD pipelines, optimize database queries, and ensure systems can handle real-world scale reliably.
+            My work spans national government platforms, enterprise ERPs, and self-healing infrastructure stacks — all designed for resilience, low downtime, and reliable async collaboration.
           </p>
         </AnimatedElement>
 
@@ -23,7 +23,7 @@ export default function AboutContact() {
         <AnimatedElement delay={0.2} className="flex flex-col">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">Let's Connect</h2>
           <p className="text-white font-medium text-lg mb-8">
-            Open to global opportunities. <span className="text-brand">EU Relocation Ready / Open to Remote.</span>
+            Open to remote, global, and onsite opportunities.
             <span className="block mt-2 text-muted text-base">I can start immediately.</span>
           </p>
 

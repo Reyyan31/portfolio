@@ -8,19 +8,19 @@ import { Zap, ShieldCheck, Cpu } from "lucide-react";
 const skillCategories = [
   {
     title: "Backend Core",
-    skills: ["Node.js", "Express.js", "NestJS", "RESTful APIs", "WebSockets", "JWT/OAuth", "Swagger/OpenAPI"],
+    skills: ["Node.js", "Express.js", "NestJS", "Fastify", "Laravel/PHP", "Django/Flask", "RESTful APIs", "WebSockets", "JWT/OAuth", "Swagger/OpenAPI", "Livewire", "Unit Testing"],
   },
   {
     title: "DevOps & Cloud",
-    skills: ["Linux Admin (cPanel/Nginx)", "Docker & Compose", "CI/CD Pipelines", "AWS (EC2/S3)", "SSL/DNS", "Zero-Downtime Deploys", "Git/GitHub"],
+    skills: ["Kubernetes (k3s)", "Terraform", "Helm", "Docker & Compose", "GitHub Actions", "Trivy", "Traefik", "Prometheus", "Grafana", "Loki", "Alertmanager", "Chaos Engineering", "CI/CD Pipelines", "Zero-Downtime Deployments"],
   },
   {
     title: "Databases & Caching",
-    skills: ["MySQL", "PostgreSQL", "MongoDB", "SQL Server", "Redis", "Schema Design", "Query Optimization"],
+    skills: ["MySQL", "PostgreSQL", "MongoDB", "SQL Server", "Redis", "Supabase", "Vector Databases", "Schema Design", "Query Optimization"],
   },
   {
     title: "Languages & Frameworks",
-    skills: ["TypeScript / JavaScript", "PHP / Laravel", "Python / Django", "SQL", "React.js / Next.js", "Tailwind CSS"],
+    skills: ["JavaScript/TypeScript", "PHP", "Python", "SQL", "C/C++", "React.js", "Next.js", "Redux", "Tailwind CSS", "Alpine.js", "Chart.js", "jQuery", "Angular", "Three.js", "PHP Blade"],
   },
 ];
 

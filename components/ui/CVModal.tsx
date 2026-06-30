@@ -63,7 +63,7 @@ export function CVModal({ isOpen, onClose }: CVModalProps) {
                 <header className="mb-6 text-center border-b-2 border-black pb-4">
                   <h1 className="text-[28px] sm:text-4xl text-black uppercase tracking-wider mb-2 font-bold font-serif">REYYAN ALAM</h1>
                   <h2 className="text-[15px] sm:text-lg text-neutral-800 font-medium mb-3 uppercase tracking-widest">
-                    Backend Engineer • Node.js & APIs • Cloud & DevOps
+                    Backend & DevOps Engineer
                   </h2>
                   <div className="flex flex-wrap justify-center gap-x-3 gap-y-1 text-neutral-900 text-[14px]">
                     <span>reyyanalam6@gmail.com</span>
@@ -73,6 +73,8 @@ export function CVModal({ isOpen, onClose }: CVModalProps) {
                     <span>Islamabad, Pakistan</span>
                     <span>•</span>
                     <a href="https://github.com/Reyyan31" target="_blank" rel="noreferrer" className="hover:underline text-blue-800">github.com/Reyyan31</a>
+                    <span>•</span>
+                    <a href="https://reyyan-portfolio.vercel.app" target="_blank" rel="noreferrer" className="hover:underline text-blue-800">reyyan-portfolio.vercel.app</a>
                   </div>
                 </header>
 
@@ -80,14 +82,14 @@ export function CVModal({ isOpen, onClose }: CVModalProps) {
                 <section className="mb-6">
                   <h3 className="text-[16px] font-bold text-black uppercase border-b border-black mb-2 pb-1">PROFESSIONAL SUMMARY</h3>
                   <p className="text-neutral-900 text-[14px] leading-snug">
-                    Backend Engineer with 2+ year of production experience building systems that handle real users at real scale — from a national government platform with 1M+ users to an ERP managing 12,000+ students. Comfortable in Node.js, PHP/Laravel, and Django, choosing the right tool for the job. Solid DevOps fundamentals: Linux administration, Docker, CI/CD, and cloud deployments. Experienced in remote async collaboration with a US-based engineering team. Open to relocation to EU/UK/US with visa sponsorship, or fully remote.
+                    Backend & DevOps Engineer with 2+ years of production experience building systems at real scale — from a national government platform with 1M+ users to an ERP managing 12,000+ students. Proficient across Node.js, PHP/Laravel, and Django. Built and deployed AutoCloud: a self-healing Kubernetes infrastructure platform with full CI/CD, Prometheus/Grafana/Loki observability, chaos engineering, and Alertmanager email alerting on a self-managed VPS — provisioned via Terraform. Experienced in remote async collaboration with US-based teams. Open to remote, global, and onsite opportunities.
                   </p>
                 </section>
 
                 {/* Work Experience */}
                 <section className="mb-6">
                   <h3 className="text-[16px] font-bold text-black uppercase border-b border-black mb-3 pb-1">WORK EXPERIENCE</h3>
-                  
+
                   <div className="space-y-4">
                     <div>
                       <div className="flex justify-between items-baseline font-bold text-black text-[14px] leading-snug">
@@ -95,10 +97,9 @@ export function CVModal({ isOpen, onClose }: CVModalProps) {
                         <span className="font-normal italic">Jan 2026 – Present</span>
                       </div>
                       <ul className="list-disc pl-[20px] mt-[6px] space-y-[4px] text-neutral-900 text-[14px] leading-snug marker:text-black">
-                        <li>Built SLS — a school ERP serving 12,000+ students across 8 role-based portals. Covers full student lifecycle, fee/challan generation with bulk print, attendance, exam grading, and financial audit reports (Excel/PDF).</li>
-                        <li>Built Hello Creative IT Portal — a company-wide CRM/ERP managing all staff HR (payroll, shifts, leaves), Kanban deal pipelines, Gantt-chart project tracking, invoicing, and a double-entry accounting module (P&L, balance sheet, ledger).</li>
+                        <li>Built SLS — a school ERP serving 12,000+ students across 8 role-based portals covering the full student lifecycle, fee/challan generation with bulk print, attendance, exam grading, and financial audit reports (Excel/PDF).</li>
+                        <li>Built Hello Creative IT Portal — a company-wide CRM/ERP managing HR (payroll, shifts, leaves), Kanban deal pipelines, Gantt project tracking, invoicing, and a double-entry accounting module (P&L, balance sheet, ledger).</li>
                         <li>Own all server operations: Linux/cPanel provisioning, SSL/DNS, environment separation, DB migrations, and production monitoring — maintaining ≥99% uptime across live systems.</li>
-                        <li>Standardised deployment process (staging → production, rollback procedures, health checks), cutting production incidents significantly.</li>
                       </ul>
                     </div>
 
@@ -119,8 +120,7 @@ export function CVModal({ isOpen, onClose }: CVModalProps) {
                         <span className="font-normal italic">Aug 2025 – Dec 2025</span>
                       </div>
                       <ul className="list-disc pl-[20px] mt-[6px] space-y-[4px] text-neutral-900 text-[14px] leading-snug marker:text-black">
-                        <li>Built and shipped content platforms (content upload, feed/scroll experiences) and e-commerce projects across multiple client engagements.</li>
-                        <li>Delivered across Node.js, Django, Flask, and PHP within the same company — framework-agnostic backend delivery under Agile/Scrum.</li>
+                        <li>Built and shipped content platforms and e-commerce projects across Node.js, Django, Flask, and PHP — framework-agnostic backend delivery under Agile/Scrum.</li>
                         <li>Containerised services with Docker, deployed to AWS EC2/S3, maintained CI/CD pipelines and automated DB migrations.</li>
                       </ul>
                     </div>
@@ -142,26 +142,36 @@ export function CVModal({ isOpen, onClose }: CVModalProps) {
                 <section className="mb-6">
                   <h3 className="text-[16px] font-bold text-black uppercase border-b border-black mb-3 pb-1">TECHNICAL SKILLS</h3>
                   <div className="text-[14px] text-neutral-900 leading-[1.6]">
-                    <p><span className="font-bold">Primary — Backend:</span> Node.js, Express.js, NestJS, RESTful APIs, WebSockets, JWT/OAuth, API design & documentation (Swagger/OpenAPI)</p>
-                    <p><span className="font-bold">Primary — DevOps:</span> Linux Admin (cPanel / Nginx / WHM), Docker & Compose, CI/CD Pipelines, AWS (EC2 • S3), SSL/DNS, Zero-Downtime Deployments, Git/GitHub</p>
-                    <p><span className="font-bold">Also Proficient:</span> Laravel / PHP, Django / Flask — additional backend stacks used in production</p>
-                    <p><span className="font-bold">Frontend:</span> React.js, Next.js, Redux, TypeScript, JavaScript (ES6+), Tailwind CSS, PHP Blade</p>
-                    <p><span className="font-bold">Databases:</span> MySQL, PostgreSQL, MongoDB, SQL Server, Redis — schema design, query optimisation</p>
-                    <p><span className="font-bold">Languages:</span> JavaScript / TypeScript • PHP • Python • SQL • C/C++</p>
+                    <p><span className="font-bold">Backend:</span> Node.js, Express.js, NestJS, Fastify, Laravel/PHP, Django/Flask, RESTful APIs, WebSockets, JWT/OAuth, Swagger/OpenAPI, Livewire, Unit Testing</p>
+                    <p><span className="font-bold">DevOps & Cloud:</span> Kubernetes (k3s), Terraform, Helm, Docker & Compose, GitHub Actions, Trivy, Traefik, Prometheus, Grafana, Loki, Alertmanager, Chaos Engineering, CI/CD Pipelines, Zero-Downtime Deployments</p>
+                    <p><span className="font-bold">Cloud Platforms:</span> AWS (EC2, S3, Lambda), GCP, Azure, OCI — Linux Admin (Nginx/cPanel/WHM), SSL/DNS, Cloudflare, CDN, Cloud Storage</p>
+                    <p><span className="font-bold">Frontend:</span> React.js, Next.js, Redux, TypeScript, JavaScript (ES6+), Tailwind CSS, Alpine.js, Chart.js, jQuery, Angular, Three.js, PHP Blade</p>
+                    <p><span className="font-bold">Databases:</span> MySQL, PostgreSQL, MongoDB, SQL Server, Redis, Supabase, Vector Databases — schema design, query optimisation</p>
+                    <p><span className="font-bold">AI / LLM:</span> OpenAI APIs, LLM integration, LMS integration, AI-powered application development</p>
+                    <p><span className="font-bold">Other:</span> Web Scraping, Git/GitHub, GHCR, Agile/Scrum, API versioning</p>
+                    <p><span className="font-bold">Languages:</span> JavaScript/TypeScript • PHP • Python • SQL • C/C++</p>
                   </div>
                 </section>
 
                  {/* Key Projects */}
                  <section className="mb-6">
                   <h3 className="text-[16px] font-bold text-black uppercase border-b border-black mb-3 pb-1">KEY PROJECTS</h3>
-                  
+
                   <div className="space-y-[14px]">
+                    <div>
+                      <div className="font-bold text-black text-[14px]">AutoCloud – Self-Healing Kubernetes Infrastructure <span className="font-normal italic"> | k3s • Terraform • Docker • GitHub Actions • Prometheus • Grafana • Loki • Alertmanager</span></div>
+                      <a href="https://github.com/Reyyan31/portfolio" className="text-blue-800 text-[14px] mb-[4px] inline-block hover:underline">🔗 github.com/Reyyan31/portfolio</a>
+                      <ul className="list-none pl-3 space-y-1 text-neutral-900 text-[14px] leading-snug">
+                        <li className="relative before:content-['▪'] before:absolute before:-left-3 before:text-[10px] before:top-[3px]">Self-managed VPS provisioned via Terraform; k3s cluster with Traefik ingress, full CI/CD pipeline (build → Trivy scan → GHCR push → SSH deploy) — live deploys in ~2 minutes.</li>
+                        <li className="relative before:content-['▪'] before:absolute before:-left-3 before:text-[10px] before:top-[3px]">Full observability stack: Prometheus + Grafana dashboards, Loki log aggregation, Alertmanager email alerts. Chaos Monkey CronJob demonstrates automatic pod recovery.</li>
+                      </ul>
+                    </div>
+
                     <div>
                       <div className="font-bold text-black text-[14px]">SLS – School Management System <span className="font-normal italic"> | PHP • Laravel • MySQL • Bootstrap</span></div>
                       <a href="https://sls.creativeitpark.org" className="text-blue-800 text-[14px] mb-[4px] inline-block hover:underline">🔗 sls.creativeitpark.org</a>
                       <ul className="list-none pl-3 space-y-1 text-neutral-900 text-[14px] leading-snug">
-                        <li className="relative before:content-['▪'] before:absolute before:-left-3 before:text-[10px] before:top-[3px]">12,000+ students across 8 role portals; full student lifecycle, fee collection, challan bulk-print, exam grading, attendance.</li>
-                        <li className="relative before:content-['▪'] before:absolute before:-left-3 before:text-[10px] before:top-[3px]">Financial audit suite with daily cash book, month-end reports, and Excel/PDF exports used by administrators daily.</li>
+                        <li className="relative before:content-['▪'] before:absolute before:-left-3 before:text-[10px] before:top-[3px]">12,000+ students across 8 role portals; full student lifecycle, fee collection, challan bulk-print, exam grading, attendance, financial audit suite with Excel/PDF exports.</li>
                       </ul>
                     </div>
 
@@ -169,8 +179,7 @@ export function CVModal({ isOpen, onClose }: CVModalProps) {
                       <div className="font-bold text-black text-[14px]">Hello Creative IT Portal – CRM / ERP <span className="font-normal italic"> | PHP • Laravel • MySQL • Vue.js • Redis</span></div>
                       <a href="https://hello.creativeitpark.org" className="text-blue-800 text-[14px] mb-[4px] inline-block hover:underline">🔗 hello.creativeitpark.org</a>
                       <ul className="list-none pl-3 space-y-1 text-neutral-900 text-[14px] leading-snug">
-                        <li className="relative before:content-['▪'] before:absolute before:-left-3 before:text-[10px] before:top-[3px]">Company-wide system: full HR (payroll, shifts, leaves, attendance), Kanban deal pipelines, Gantt project tracking.</li>
-                        <li className="relative before:content-['▪'] before:absolute before:-left-3 before:text-[10px] before:top-[3px]">Double-entry accounting module — ledger, P&L, balance sheet, cash flow, trial balance — used as the live financial system.</li>
+                        <li className="relative before:content-['▪'] before:absolute before:-left-3 before:text-[10px] before:top-[3px]">Company-wide system: full HR (payroll, shifts, leaves), Kanban pipelines, Gantt tracking, double-entry accounting (ledger, P&L, balance sheet, cash flow, trial balance).</li>
                       </ul>
                     </div>
 
@@ -178,8 +187,7 @@ export function CVModal({ isOpen, onClose }: CVModalProps) {
                       <div className="font-bold text-black text-[14px]">PomPak – National Financial Literacy Platform <span className="font-normal italic"> | PHP • Laravel • SQL Server • JavaScript</span></div>
                       <a href="https://nflpy.knowledgeplatform.com" className="text-blue-800 text-[14px] mb-[4px] inline-block hover:underline">🔗 nflpy.knowledgeplatform.com</a>
                       <ul className="list-none pl-3 space-y-1 text-neutral-900 text-[14px] leading-snug">
-                        <li className="relative before:content-['▪'] before:absolute before:-left-3 before:text-[10px] before:top-[3px]">1M+ registered users • 750,000+ students • 45+ districts — backed by State Bank of Pakistan and JazzCash.</li>
-                        <li className="relative before:content-['▪'] before:absolute before:-left-3 before:text-[10px] before:top-[3px]">53 bilingual modules (English/Urdu) with SQL Server stored procedures and multi-tenant auth at national scale.</li>
+                        <li className="relative before:content-['▪'] before:absolute before:-left-3 before:text-[10px] before:top-[3px]">1M+ registered users • 750,000+ students • 45+ districts — backed by State Bank of Pakistan and JazzCash. 53 bilingual modules with SQL Server stored procedures at national scale.</li>
                       </ul>
                     </div>
 
@@ -187,8 +195,7 @@ export function CVModal({ isOpen, onClose }: CVModalProps) {
                       <div className="font-bold text-black text-[14px]">BuzzMap – Real-Time Event Discovery Platform <span className="font-normal italic"> | Node.js • Express • MongoDB • Redis • WebSockets</span></div>
                       <a href="https://buzzmap.org" className="text-blue-800 text-[14px] mb-[4px] inline-block hover:underline">🔗 buzzmap.org</a>
                       <ul className="list-none pl-3 space-y-1 text-neutral-900 text-[14px] leading-snug">
-                        <li className="relative before:content-['▪'] before:absolute before:-left-3 before:text-[10px] before:top-[3px]">Live platform for US client (Nodescale LLC): real-time event feeds, geolocation APIs, OAuth 2.0, Redis caching.</li>
-                        <li className="relative before:content-['▪'] before:absolute before:-left-3 before:text-[10px] before:top-[3px]">Fully remote delivery to US engineering standards — async collaboration, PR discipline, API versioning.</li>
+                        <li className="relative before:content-['▪'] before:absolute before:-left-3 before:text-[10px] before:top-[3px]">Live US platform: real-time event feeds, geolocation APIs, OAuth 2.0, Redis caching, &lt;50ms WebSocket latency, 99.99% uptime. Fully remote delivery to US engineering standards.</li>
                       </ul>
                     </div>
                   </div>
@@ -198,15 +205,15 @@ export function CVModal({ isOpen, onClose }: CVModalProps) {
                 <section>
                   <h3 className="text-[16px] font-bold text-black uppercase border-b border-black mb-3 pb-1">EDUCATION & CERTIFICATIONS</h3>
                   <div className="text-[14px] text-black">B.Sc. Computer Science • Air University, Islamabad • In progress</div>
-                  
+
                   <div className="text-[14px] text-black font-bold mt-4 mb-2">Professional Credentials</div>
                   <ul className="list-none space-y-[2px] text-neutral-900 text-[14px] leading-snug font-normal pl-2">
-                    <li>– Experience Letter — Creative IT Park — Backend Developer • Jan 2026–Present</li>
-                    <li>– Experience Letter — Nodescale LLC (USA) — Backend Engineer • BuzzMap • Remote</li>
-                    <li>– Employment Certificate — Seven Koncepts — Full Stack Software Engineer</li>
+                    <li>– Experience Letter — Creative IT Park • Backend Developer • Jan 2026–Present</li>
+                    <li>– Experience Letter — Nodescale LLC (USA) • Backend Engineer • BuzzMap • Remote</li>
+                    <li>– Employment Certificate — Seven Koncepts • Full Stack Software Engineer</li>
                   </ul>
                   <p className="mt-6 text-center text-black text-[14px]">
-                    Available for remote,hybrid and onsite roles - globally and in Pakistan • Can start immediately
+                    Open to remote, global, and onsite opportunities • Can start immediately
                   </p>
                 </section>
 
